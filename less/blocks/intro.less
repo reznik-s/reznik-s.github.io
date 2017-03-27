@@ -1,0 +1,154 @@
+.intro {
+  position: relative;
+  top: 460px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  background: @darkblue;
+}
+
+.intro__slogan {
+  display: none;
+}
+
+.intro__downloads {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 280px;
+}
+
+.intro__downl-app {
+  display: block;
+  width: 280px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 0;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 3px solid #ffffff;
+  border-radius: 50px;
+  box-sizing: border-box;
+
+  &:hover {
+    color: @pink;
+    background: #ffffff;
+  }
+
+  &:active {
+    color: @pink-rgba-active;
+  }
+}
+
+.intro__app {
+  display: block;
+  width: 50px;
+  height: 60px;
+  font-size: 0;
+  margin-bottom: 10px;
+}
+
+.intro__app--apple {
+  background: url("../img/logo-apple.svg") no-repeat;
+}
+
+.intro__app--android {
+  background: url("../img/logo-android.svg") 0% 50% no-repeat;
+}
+
+.intro__app--windows {
+  background: url("../img/logo-microsoft.svg") 0% 50% no-repeat;
+}
+
+.intro__descr {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+@media @tablet-width {
+  .intro {
+    .container();
+    min-height: 625px;
+    position: static;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    background: none;
+  }
+
+  .intro__wrapper {
+    position: relative;
+    top: 100px;
+    width: 300px;
+  }
+
+  .intro__slogan {
+    display: block;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 0 30px;
+    margin-bottom: 30px;
+  }
+
+  .intro__downloads {
+    width: 300px;
+  }
+
+  .intro__downl-app {
+    width: 300px;
+    margin-bottom: 40px;
+  }
+
+  .intro__app {
+    margin-bottom: 20px;
+  }
+
+  .intro__descr {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+}
+
+@media @desktop-width {
+  .intro {
+    min-height: 745px;
+    position: static;
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 1;
+    align-items: center;
+    padding: 0;
+    background: none;
+  }
+
+  .intro__wrapper {
+    position: static;
+  }
+
+  .intro__slogan {
+    display: block;
+    font-size: 50px;
+    font-weight: 300;
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+
+  .intro__downl-app {
+    font-size: 21px;
+    margin-bottom: 65px;
+  }
+
+  .intro__app {
+    margin-bottom: 40px;
+  }
+}
