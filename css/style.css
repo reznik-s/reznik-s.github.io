@@ -10,6 +10,7 @@ img {
 .page-header {
   position: relative;
   min-height: 460px;
+  margin-bottom: 275px;
   background: url("../img/iphone-hand-mobile@1x.png") 50% 120% no-repeat, url("../img/bg-back-mobile@1x.jpg") 50% 0% no-repeat;
   background-size: 314px, cover;
 }
@@ -22,6 +23,7 @@ img {
     min-height: 730px;
     background: url("../img/iphone-hand-tablet@1x.png") 50% 100% no-repeat, url("../img/bg-back-tablet@1x.jpg") 50% 0% no-repeat;
     background-size: 700px, cover;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
@@ -153,9 +155,10 @@ img {
   }
   .main-nav .main-nav__list {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 620px;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -342,5 +345,99 @@ img {
   }
   .intro__app {
     margin-bottom: 40px;
+  }
+}
+.offers {
+  text-align: center;
+  padding: 0 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.offers__text {
+  font-size: 24px;
+  font-weight: 300;
+  color: #283645;
+}
+@media (min-width: 700px) {
+  .offers {
+    padding-top: 50px;
+    padding-bottom: 45px;
+  }
+  .offers__text {
+    font-size: 40px;
+    margin: 0;
+  }
+  .offers__text--second {
+    font-size: 40px;
+    padding: 0 150px;
+    margin: 0;
+  }
+}
+.service {
+  min-height: 785px;
+  text-align: center;
+  background: url("../img/service-iphone.png") 50% 110% no-repeat, #f2f2f2;
+}
+.service__item {
+  width: 280px;
+  margin: 0 auto;
+}
+@media (min-width: 700px) {
+  .service__item {
+    width: 620px;
+  }
+}
+@media (min-width: 1200px) {
+  .service__item {
+    width: 940px;
+  }
+}
+.service__item--first {
+  padding-top: 80px;
+}
+.service__title {
+  display: inline-block;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.service__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283645;
+  margin: 0;
+  margin-bottom: 25px;
+}
+.service__item--third .service__text:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 700px) {
+  .service {
+    display: flex;
+    min-height: 485px;
+  }
+  .service__wrapper {
+    width: 280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: url("../img/iphone-service-table.png") 0% 0% no-repeat, #f2f2f2;
+  }
+  .service__item {
+    width: 310px;
+    text-align: left;
+    margin: 0;
+  }
+}
+@media (min-width: 700px) and (min-width: 700px) {
+  .service__wrapper {
+    width: 620px;
+  }
+}
+@media (min-width: 700px) and (min-width: 1200px) {
+  .service__wrapper {
+    width: 940px;
   }
 }
