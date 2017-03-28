@@ -1,0 +1,92 @@
+.round-diagram {
+  display: none;
+}
+
+@media @tablet-width {
+  .round-diagram {
+    display: block;
+  }
+
+  .round-diagram__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    .container();
+    background: url("../img/round-diagram-tablet.png") 0% 40% no-repeat;
+  }
+
+  .round-diagram__text {
+    width: 300px;
+  }
+
+  .round-diagram__title {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    padding-top: 90px;
+    padding-right: 130px;
+    margin-bottom: 15px;
+  }
+
+  .round-diagram__descr {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: @blue;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .round-diagram__link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: @pink;
+    padding-bottom: 90px;
+  }
+}
+
+@media @desktop-width {
+  .round-diagram {
+    display: block;
+    background: @lightgray;
+  }
+
+  .round-diagram__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    background: url("../img/round-diagram-desktop.png") 0% 30% no-repeat;
+  }
+
+  .round-diagram__text {
+    width: 570px;
+  }
+
+  .round-diagram__title {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    padding-top: 110px;
+    margin-bottom: 25px;
+  }
+
+  .round-diagram__descr {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: @blue;
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  .round-diagram__link {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: @pink;
+    padding-bottom: 110px;
+  }
+}
