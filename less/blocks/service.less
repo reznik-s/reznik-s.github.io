@@ -1,0 +1,99 @@
+.service {
+  position: relative;
+  min-height: 785px;
+  text-align: center;
+  background: url("../img/service-iphone.png") 50% 110% no-repeat, url("../img/bg-triangle-white.svg") 50% 0% no-repeat, @lightgray;
+  background-size: 160px, 100%;
+}
+
+.service__item {
+  .container();
+}
+
+.service__item--first {
+  padding-top: 80px;
+}
+
+.service__title {
+  display: inline-block;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @blue;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.service__item--third .service__text:last-child {
+  margin-bottom: 0;
+}
+
+@media @tablet-width {
+  .service {
+    display: flex;
+    min-height: 485px;
+    background: url("../img/bg-triangle-white.svg") 50% 0% no-repeat, @lightgray;
+    background-size: 100%;
+  }
+
+  .service__wrapper {
+    .container();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: url("../img/iphone-service-table.png") 0% -10% no-repeat;
+  }
+
+  .service__item {
+    width: 310px;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+@media @desktop-width {
+  .service {
+    display: flex;
+    min-height: 595px;
+    background: url("../img/bg-triangle-white.svg") 50% 0% no-repeat, @lightgray;
+    background-size: 100%;
+  }
+
+  .service__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: url("../img/iphone-service-desktop.png") 0% 0% no-repeat,
+    url("../img/iphone-service-desktop-2.png") 50% 0% no-repeat,
+    url("../img/iphone-service-desktop-3.png") 100% 0% no-repeat;
+  }
+
+  .service__item {
+    width: 300px;
+    text-align: center;
+    margin-top: 350px;
+  }
+
+  .service__item--first {
+    padding: 0;
+  }
+
+  .service__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+
+  .service__text {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 0 18px;
+  }
+}

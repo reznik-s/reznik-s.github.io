@@ -36,15 +36,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-
-  &:hover {
-    background: url("../img/icon-menu-burger-hover.svg") no-repeat;
-  }
-
-  &:active {
-    background: url("../img/icon-menu-burger-hover.svg") no-repeat;
-    opacity: 0.3;
-  }
 }
 
 .main-nav--closed .main-nav__list {
@@ -52,7 +43,18 @@
 }
 
 .main-nav--opened {
+  animation: menu 0.6s ease;
   background: @blue;
+}
+
+@keyframes menu {
+  0% {
+    transform: translateY(-361px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .main-nav--opened .main-nav__btn {
@@ -65,15 +67,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-
-  &:hover {
-    background: url("../img/icon-menu-cross-hover.svg") 100% 0% no-repeat;
-  }
-
-  &:active {
-    background: url("../img/icon-menu-cross-hover.svg") 100% 0% no-repeat;
-    opacity: 0.3;
-  }
 }
 
 .main-nav--opened .main-nav__list {
@@ -129,9 +122,10 @@
 
   .main-nav .main-nav__list {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 620px;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -161,7 +155,8 @@
       right: 0;
       left: 0;
       width: 100%;
-      border: 1px solid #ffffff;
+      height: 2px;
+      background: #ffffff;
       transition: 0.3s;
     }
   }
