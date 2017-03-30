@@ -1,13 +1,14 @@
-var link = document.querySelector(".map__btn");
-var popup = document.querySelector(".modal-content");
-var close = popup.querySelector(".modal-content--close");
+var navMain = document.querySelector(".main-nav");
+var navBtn = document.querySelector(".main-nav__btn");
 
-link.addEventListener("click", function(event) {
-  event.preventDefault();
-  popup.classList.add("modal-content--show");
+navBtn.addEventListener("click", function() {
+  if (navMain.classList.contains("main-nav--closed")) {
+    navMain.classList.remove("main-nav--closed");
+    navMain.classList.add("main-nav--opened");
+  } else {
+    navMain.classList.add("main-nav--closed");
+    navMain.classList.remove("main-nav--opened");
+  }
 });
 
-close.addEventListener("click", function(event) {
-  event.preventDefault();
-  popup.classList.remove("modal-content--show");
-});
+  $(".review-slider").slick();
