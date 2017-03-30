@@ -1,0 +1,140 @@
+.price-table {
+  position: relative;
+  left: 50%;
+  width: 840px;
+  padding-top: 90px;
+  margin-left: -420px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.price-table thead {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.price-table__header {
+  position: relative;
+  width: 276px;
+  padding: 20px 0;
+  background: @blue;
+  border-right: 2px solid #e5e5e5;
+}
+
+.price-table__header--flag::before {
+  content: "Хит";
+  position: absolute;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 700;
+  top: 9px;
+  left: 10px;
+  z-index: 2;
+  transform: rotate(-45deg);
+}
+
+.price-table__header--flag::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 74px;
+  height: 73px;
+  background: url("../img/bg-hit.svg") no-repeat;
+}
+
+.price-table__header--empty {
+  display: none;
+}
+
+.price-table__title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.price-table__cost {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.price-table__service {
+  width: 276px;
+  font-size: 14px;
+  line-height: 30px;
+  color: @blue;
+  padding: 15px 20px;
+  background: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+.price-table__service-name {
+  display: block;
+}
+
+.price-table__service-name--yes {
+  background: url("../img/icon-yes.png") 100% 50% no-repeat;
+}
+
+.price-table__service-name--no {
+  background: url("../img/icon-no.png") 100% 50% no-repeat;
+}
+
+.price-table__service:last-child {
+  display: none;
+}
+
+@media @tablet-width {
+  .price-table {
+    .container();
+    position: static;
+    margin: 0;
+    margin: 0 auto;
+  }
+
+  .price-table__header {
+    width: 155px;
+  }
+
+  .price-table__header--empty {
+    display: table-row;
+  }
+
+  .price-table__title {
+    font-size: 16px;
+  }
+
+  .price-table__cost {
+    font-size: 18px;
+  }
+
+  .price-table__service {
+    width: 152px;
+    text-transform: none;
+    padding: 10px 15px;
+  }
+
+  .price-table__service:last-child {
+    display: table-cell;
+  }
+
+  .price-table__service-name {
+    font-size: 0;
+  }
+
+  .price-table__service-name--yes {
+    background: url("../img/icon-yes.png") 50% 50% no-repeat;
+  }
+
+  .price-table__service-name--no {
+    background: url("../img/icon-no.png") 50% 50% no-repeat;
+  }
+}
+
+@media @desktop-width {
+  .price {
+    padding-top: 150px;
+  }
+}

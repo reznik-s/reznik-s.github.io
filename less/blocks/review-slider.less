@@ -12,7 +12,7 @@
 
 .review-slider__controls {
   position: absolute;
-  bottom: 45px;
+  bottom: 40px;
   left: 50%;
   width: 140px;
   margin: 0 auto;
@@ -46,6 +46,10 @@
 #review-slider-2:checked ~ .review-slider__controls .review-slider__control[for="review-slider-2"],
 #review-slider-3:checked ~ .review-slider__controls .review-slider__control[for="review-slider-3"] {
   border: 3px solid @blue;
+
+  &:hover {
+    background: none;
+  }
 }
 
 .review-slider__slide {
@@ -90,6 +94,14 @@
     flex-direction: column;
   }
 
+  .review-slider {
+    padding-bottom: 60px;
+  }
+
+  .review-slider__controls {
+    bottom: 15px;
+  }
+
   .review-slider__author {
     font-size: 20px;
     line-height: 30px;
@@ -103,7 +115,6 @@
     line-height: 30px;
     color: @blue;
     margin: 0;
-    margin-bottom: 15px;
     order: 4;
   }
 
@@ -111,5 +122,36 @@
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 30px;
+  }
+}
+
+@media @desktop-width {
+  .review-slider {
+    padding-top: 190px;
+    padding-bottom: 40px;
+    background: url("../img/quotes.png") 50% 17% no-repeat;
+  }
+
+  .review-slider__controls {
+    bottom: 0;
+  }
+
+  .review-slider__author {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+
+  .review-slider__text {
+    width: 720px;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .review-slider__author-info {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
